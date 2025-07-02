@@ -1,113 +1,1144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amal Saju | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-    body { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #f1f1f1; line-height: 1.6; }
-    header { text-align: center; padding: 4rem 1rem; }
-    header h1 { font-size: 3rem; font-weight: 800; }
-    header p { margin-top: 1rem; font-size: 1.2rem; color: #d1d1d1; }
-    nav { text-align: center; margin-top: 2rem; }
-    nav a { margin: 0 1rem; color: #fff; text-decoration: none; font-weight: 600; }
-    section { padding: 3rem 1rem; max-width: 960px; margin: auto; }
-    h2 { font-size: 2rem; margin-bottom: 1rem; border-left: 4px solid #00c6ff; padding-left: 0.5rem; }
-    .card { background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px; margin-bottom: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
-    ul { padding-left: 1.25rem; }
-    .tag { background: #00c6ff33; color: #00c6ff; padding: 0.25rem 0.5rem; border-radius: 4px; display: inline-block; margin: 0.25rem; font-weight: 600; }
-    footer { text-align: center; padding: 2rem; background: #111; color: #999; font-size: 0.9rem; }
-    .contact a { color: #00c6ff; display: block; margin-top: 0.5rem; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amal Saju - Healthcare Administration Professional</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            light: '#00d4ff',
+                            DEFAULT: '#667eea',
+                            dark: '#7c3aed',
+                        },
+                        dark: {
+                            lighter: '#1e293b',
+                            light: '#0f172a',
+                            DEFAULT: '#0a0f1a',
+                            dark: '#050712',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        * {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0a0f1a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #0a0f1a 0%, #0f172a 100%);
+        }
+
+        .gradient-bg-alt {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-text-alt {
+            background: linear-gradient(135deg, #00d4ff 0%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .glow-effect {
+            box-shadow: 0 0 15px rgba(102, 126, 234, 0.2);
+        }
+
+        .glow-effect:hover {
+            box-shadow: 0 0 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.7s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .fade-in-left {
+            animation: fadeInLeft 0.7s ease-out forwards;
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+
+        .fade-in-right {
+            animation: fadeInRight 0.7s ease-out forwards;
+            opacity: 0;
+            transform: translateX(20px);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .delay-1 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.3s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-5 {
+            animation-delay: 0.5s;
+        }
+
+        .delay-6 {
+            animation-delay: 0.6s;
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .pulse-glow {
+            animation: pulseGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%,
+            100% {
+                box-shadow: 0 0 15px rgba(102, 126, 234, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(102, 126, 234, 0.6);
+            }
+        }
+
+        .bg-glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .company-link {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .company-link::after {
+            content: '🔗';
+            margin-left: 8px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .company-link:hover::after {
+            opacity: 1;
+        }
+
+        .company-link:hover {
+            transform: scale(1.03);
+            text-shadow: 0 0 10px rgba(102, 126, 234, 0.8);
+        }
+
+        .section-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #1e293b;
+            transition: all 0.3s ease;
+        }
+
+        .section-dot.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+            transform: scale(1.3);
+        }
+
+        .timeline-line {
+            width: 2px;
+            background: linear-gradient(to bottom, rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8));
+        }
+
+        .pattern-dots {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .skill-bar {
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+            width: 0;
+            transition: width 1.5s ease-out;
+        }
+
+        .border-gradient {
+            border: 2px solid;
+            border-image-slice: 1;
+            border-image-source: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        /* Progress indicator styles */
+
+        .progress-container {
+            width: 2px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .progress-bar-scroll {
+            width: 100%;
+            background: linear-gradient(to bottom, #667eea, #764ba2);
+            height: 0;
+            transition: height 0.1s ease;
+        }
+
+        /* Mobile Menu Styles */
+
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        /* Print styles */
+
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .print-white {
+                background: white !important;
+                color: black !important;
+            }
+            .print-visible {
+                display: block !important;
+            }
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <h1>Amal Saju</h1>
-    <p>Healthcare Administration & Patient Relations Specialist</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
+
+<body class="bg-dark text-white min-h-screen">
+    <!-- Progress Indicator (Fixed) -->
+    <div class="fixed top-0 right-0 h-screen w-2 z-50 no-print">
+        <div class="progress-container h-full">
+            <div id="scrollProgress" class="progress-bar-scroll"></div>
+        </div>
+    </div>
+
+    <!-- Navigation Dots (Fixed) -->
+    <div class="fixed top-1/2 transform -translate-y-1/2 right-8 z-50 hidden lg:flex flex-col items-center space-y-5 no-print">
+        <a href="#hero" class="section-dot active" data-section="hero"></a>
+        <a href="#about" class="section-dot" data-section="about"></a>
+        <a href="#experience" class="section-dot" data-section="experience"></a>
+        <a href="#skills" class="section-dot" data-section="skills"></a>
+        <a href="#education" class="section-dot" data-section="education"></a>
+        <a href="#languages" class="section-dot" data-section="languages"></a>
+        <a href="#contact" class="section-dot" data-section="contact"></a>
+    </div>
+
+    <!-- Top Navigation -->
+    <nav class="fixed top-0 w-full bg-glass backdrop-blur-md z-40 shadow-md no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="#hero" class="text-2xl font-bold gradient-text flex items-center space-x-2">
+                    <span>Amal Saju</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-300 hover:text-primary transition-colors text-sm uppercase tracking-wider font-medium">About</a>
+                    <a href="#experience" class="text-gray-300 hover:text-primary transition-colors text-sm uppercase tracking-wider font-medium">Experience</a>
+                    <a href="#skills" class="text-gray-300 hover:text-primary transition-colors text-sm uppercase tracking-wider font-medium">Skills</a>
+                    <a href="#education" class="text-gray-300 hover:text-primary transition-colors text-sm uppercase tracking-wider font-medium">Education</a>
+                    <a href="#contact" class="text-gray-300 hover:text-primary transition-colors text-sm uppercase tracking-wider font-medium">Contact</a>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="mailto:saju.amal4@gmail.com" class="text-gray-300 hover:text-primary transition-colors">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <button id="printResume" class="bg-dark-lighter hover:bg-primary text-white text-sm py-2 px-4 rounded-full transition-colors">
+                        <i class="fas fa-print mr-2"></i> Print Resume
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuButton" class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="card">
-      <p>With 6+ years in healthcare administration and patient engagement, I currently serve as Administration/Customer Relations Officer at <a href="https://www.linkedin.com/company/multicare-medical-center-l-l-c" target="_blank" style="color:#00c6ff;">MultiCare Medical Center</a>. I’m passionate about improving patient experiences and operational efficiency through empathy, strategy, and technology.</p>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed top-0 left-0 w-64 h-screen bg-dark-light z-50 mobile-menu no-print">
+        <div class="flex flex-col h-full">
+            <div class="p-5 border-b border-dark-lighter">
+                <div class="flex justify-between items-center">
+                    <span class="text-xl font-semibold gradient-text">Menu</span>
+                    <button id="closeMenu" class="text-gray-400 hover:text-white">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="flex flex-col p-5 space-y-4">
+                <a href="#hero" class="text-gray-300 hover:text-primary py-2 transition-colors">Home</a>
+                <a href="#about" class="text-gray-300 hover:text-primary py-2 transition-colors">About</a>
+                <a href="#experience" class="text-gray-300 hover:text-primary py-2 transition-colors">Experience</a>
+                <a href="#skills" class="text-gray-300 hover:text-primary py-2 transition-colors">Skills</a>
+                <a href="#education" class="text-gray-300 hover:text-primary py-2 transition-colors">Education</a>
+                <a href="#languages" class="text-gray-300 hover:text-primary py-2 transition-colors">Languages</a>
+                <a href="#contact" class="text-gray-300 hover:text-primary py-2 transition-colors">Contact</a>
+            </div>
+            <div class="mt-auto p-5 border-t border-dark-lighter">
+                <button id="printResumeMobile" class="w-full bg-primary-dark hover:bg-primary text-white py-2 px-4 rounded-md transition-colors">
+                    <i class="fas fa-print mr-2"></i> Print Resume
+                </button>
+            </div>
+        </div>
     </div>
-  </section>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="card">
-      <strong>MultiCare Medical Center – Dubai (Nov 2023 – Present)</strong>
-      <ul>
-        <li>Improved patient satisfaction to 95% by managing inquiries and follow-ups</li>
-        <li>Resolved 60+ patient complaints weekly, enhancing retention</li>
-        <li>Increased digital engagement by 98%</li>
-      </ul>
-    </div>
-    <div class="card">
-      <strong>Yasmed – Al Saha Wa Al Shifa Hospital – Sharjah (Mar 2022 – Nov 2023)</strong>
-      <ul>
-        <li>Managed 80+ daily patient interactions</li>
-        <li>Reduced wait time by 70% through scheduling optimization</li>
-        <li>Processed 400+ insurance claims monthly</li>
-      </ul>
-    </div>
-    <div class="card">
-      <strong>Bab Al Sajja Medical Center – Sharjah (Feb 2019 – Jan 2021)</strong>
-      <ul>
-        <li>Assisted 250+ patients/day and reduced registration time by 60%</li>
-        <li>Led digital record implementation, cutting paper errors</li>
-      </ul>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen pt-20 flex items-center gradient-bg text-white relative overflow-hidden pattern-dots">
+        <div class="absolute inset-0 bg-dark opacity-90"></div>
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-20 w-72 h-72 bg-primary rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
+            <div class="absolute bottom-20 right-20 w-72 h-72 bg-primary-dark rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse delay-700"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-16">
+            <div class="grid lg:grid-cols-5 gap-10 items-center">
+                <div class="lg:col-span-3 text-center lg:text-left">
+                    <div class="mb-6">
+                        <h1 class="text-5xl lg:text-7xl font-bold mb-6 fade-in-up">
+                            <span class="gradient-text-alt">Amal Saju</span>
+                        </h1>
+                        <h2 class="text-2xl lg:text-3xl font-light mb-8 fade-in-up delay-1 text-gray-200">
+                            Healthcare Administration Professional
+                        </h2>
+                        <p class="text-lg mb-10 max-w-2xl mx-auto lg:mx-0 fade-in-up delay-2 text-gray-300 leading-relaxed">
+                            6+ years of excellence in healthcare administration, customer relations, and operational optimization. Transforming patient experiences through innovative solutions.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4 fade-in-up delay-3">
+                        <a href="mailto:saju.amal4@gmail.com" class="bg-gradient-to-r from-primary-light to-primary-dark text-white px-6 py-3 rounded-full font-medium hover:shadow-lg hover:shadow-primary/20 transition-all transform hover:scale-105 focus:ring-2 focus:ring-primary focus:ring-opacity-50 focus:outline-none">
+                            <i class="fas fa-envelope mr-2"></i>Contact Me
+                        </a>
+                        <a href="https://www.linkedin.com/in/amal-saju-healthcare" target="_blank" class="bg-[#0077B5] text-white px-6 py-3 rounded-full font-medium hover:bg-[#0066a1] transition-all transform hover:scale-105 focus:ring-2 focus:ring-[#0077B5] focus:ring-opacity-50 focus:outline-none">
+                            <i class="fab fa-linkedin-in mr-2"></i>LinkedIn
+                        </a>
+                        <a href="#experience" class="border border-white/30 hover:border-white/80 text-white px-6 py-3 rounded-full font-medium hover:bg-white/10 transition-all transform hover:scale-105 focus:ring-2 focus:ring-white focus:ring-opacity-30 focus:outline-none">
+                            <i class="fas fa-briefcase mr-2"></i>View Experience
+                        </a>
+                    </div>
+                    <div class="mt-16 hidden lg:block">
+                        <p class="text-sm text-gray-400 mb-3">Scroll down to explore</p>
+                        <div class="animate-bounce mx-auto lg:mx-0 w-8 h-8 flex items-center justify-center rounded-full border border-white/20">
+                            <i class="fas fa-chevron-down text-white/50"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-2 flex justify-center lg:justify-end fade-in-right">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary-light/20 to-primary-dark/20 rounded-full blur-xl transform scale-110"></div>
+                        <div class="w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden bg-dark-light border-4 border-dark-lighter relative flex items-center justify-center pulse-glow">
+                            <i class="fas fa-user-tie text-7xl text-white/80 floating"></i>
+                        </div>
+                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-glass rounded-lg p-4 shadow-lg flex flex-col items-center justify-center border border-white/5">
+                            <span class="text-3xl font-bold gradient-text">6+</span>
+                            <span class="text-xs text-white/60 mt-1">Years Exp.</span>
+                        </div>
+                        <div class="absolute -bottom-4 -left-4 w-auto h-12 bg-glass rounded-full py-2 px-4 shadow-lg flex items-center justify-center border border-white/5">
+                            <i class="fas fa-map-marker-alt text-primary mr-2"></i>
+                            <span class="text-sm text-white/80">Sharjah, UAE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="skills">
-    <h2>Core Competencies</h2>
-    <div class="card">
-      <div class="tag">Customer Relations</div>
-      <div class="tag">Insurance Claims</div>
-      <div class="tag">Workflow Optimization</div>
-      <div class="tag">Empathy & Listening</div>
-      <div class="tag">Front Desk Management</div>
-      <div class="tag">Patient Engagement</div>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-dark-light relative pattern-dots">
+        <div class="absolute inset-0 bg-dark-light opacity-95"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 fade-in-up gradient-text-alt">Professional Summary</h2>
+                <div class="w-24 h-1 gradient-bg-alt mx-auto rounded-full fade-in-up delay-1"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-left">
+                    <div class="bg-dark rounded-xl p-8 border border-dark-lighter shadow-xl h-full">
+                        <h3 class="text-xl font-medium mb-6 text-white/90">About Me</h3>
+                        <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                            Customer-focused professional with 6+ years of experience in healthcare and customer relations. Proven ability to enhance patient satisfaction, streamline administrative operations, and optimize insurance claims processing.
+                        </p>
+                        <p class="text-lg text-gray-300 leading-relaxed">
+                            Skilled in problem-solving, workflow optimization, and delivering high-quality patient experiences in fast-paced environments. Committed to excellence in healthcare administration and patient care.
+                        </p>
+                    </div>
+                </div>
+                <div class="fade-in-right">
+                    <div class="bg-dark rounded-xl p-8 border border-dark-lighter shadow-xl h-full">
+                        <h3 class="text-xl font-medium mb-6 text-white/90">Key Achievements</h3>
+                        <div class="space-y-8">
+                            <div class="flex items-center">
+                                <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mr-5 flex-shrink-0">
+                                    <span class="text-2xl font-bold gradient-text">95%</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-white mb-1">Patient Satisfaction</h4>
+                                    <p class="text-gray-400">Improved overall patient satisfaction rating</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mr-5 flex-shrink-0">
+                                    <span class="text-2xl font-bold gradient-text">98%</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-white mb-1">Patient Engagement</h4>
+                                    <p class="text-gray-400">Increased through social media campaigns</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mr-5 flex-shrink-0">
+                                    <span class="text-2xl font-bold gradient-text">70%</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-white mb-1">Claims Processing</h4>
+                                    <p class="text-gray-400">Reduced processing time through streamlining</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mr-5 flex-shrink-0">
+                                    <span class="text-2xl font-bold gradient-text">60+</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-white mb-1">Complaints Resolved</h4>
+                                    <p class="text-gray-400">Patient concerns addressed weekly</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="education">
-    <h2>Education</h2>
-    <div class="card">
-      <p><strong>Bachelor of Business Administration</strong> – Bharathiar University (2022)</p>
-      <p><strong>Diploma in Business Management</strong> – Rajeev Gandhi Institute (2016)</p>
-    </div>
-    <h2>Languages</h2>
-    <div class="card">
-      <div class="tag">English (Fluent)</div>
-      <div class="tag">Malayalam (Native)</div>
-      <div class="tag">Hindi (Proficient)</div>
-      <div class="tag">Tamil (Basic)</div>
-      <div class="tag">Arabic (Basic)</div>
-    </div>
-  </section>
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-dark relative pattern-dots">
+        <div class="absolute inset-0 bg-dark opacity-95"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 fade-in-up gradient-text-alt">Work Experience</h2>
+                <div class="w-24 h-1 gradient-bg-alt mx-auto rounded-full fade-in-up delay-1"></div>
+            </div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="card contact">
-      <p>Email: <a href="mailto:saju.amal4@gmail.com">saju.amal4@gmail.com</a></p>
-      <p>Phone: <a href="tel:+971553102884">+971-553102884</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/amal-saju-healthcare" target="_blank">amal-saju-healthcare</a></p>
-    </div>
-  </section>
+            <!-- Timeline Experience -->
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-0 top-0 h-full md:left-1/2 md:transform md:-translate-x-px">
+                    <div class="h-full w-px bg-primary-dark/30 relative">
+                        <div class="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-primary-light/50 to-primary-dark/50"></div>
+                    </div>
+                </div>
 
-  <footer>
-    <p>&copy; 2025 Amal Saju. All rights reserved.</p>
-  </footer>
+                <!-- Experience 1 -->
+                <div class="mb-16 md:mb-12 relative">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12 md:text-right">
+                            <div class="mb-1 text-sm font-semibold text-primary-light inline-flex items-center">
+                                <i class="fas fa-calendar-alt mr-2"></i>
+                                <span>NOV 2023 - Present</span>
+                            </div>
+                            <div class="mb-4 text-sm text-gray-400 flex items-center md:justify-end">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                <span>Dubai, UAE</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Administration / Customer Relation Officer</h3>
+                            <a href="http://www.multicareuae.com" target="_blank" class="text-xl font-medium gradient-text company-link mb-4 inline-block">
+                                MultiCare Medical Center
+                            </a>
+                        </div>
+
+                        <div class="md:w-1/2 md:pl-12">
+                            <div class="bg-dark-lighter rounded-xl p-6 border border-dark-lighter shadow-lg">
+                                <ul class="space-y-4 text-gray-300">
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-1 mr-3">
+                                            <i class="fas fa-check text-primary-light text-xs"></i>
+                                        </div>
+                                        <span>Handled patient inquiries, appointment scheduling, and follow-ups, improving patient satisfaction to 95%</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-1 mr-3">
+                                            <i class="fas fa-check text-primary-light text-xs"></i>
+                                        </div>
+                                        <span>Resolved an average of 60+ patient complaints per week, enhancing patient retention and service quality</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-1 mr-3">
+                                            <i class="fas fa-check text-primary-light text-xs"></i>
+                                        </div>
+                                        <span>Increased patient engagement by 98% through social media campaigns and digital outreach strategies</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-1 mr-3">
+                                            <i class="fas fa-check text-primary-light text-xs"></i>
+                                        </div>
+                                        <span>Reduced insurance claim processing time by 70% by streamlining communication with providers</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Dot -->
+                    <div class="absolute left-0 top-5 md:left-1/2 md:transform md:-translate-x-1/2 md:top-5">
+                        <div class="w-10 h-10 rounded-full bg-primary-dark border-4 border-dark pulse-glow flex items-center justify-center">
+                            <i class="fas fa-briefcase text-white"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="mb-16 md:mb-12 relative">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12 md:text-right order-1 md:order-1">
+                            <div class="bg-dark-lighter rounded-xl p-6 border border-dark-lighter shadow-lg">
+                                <ul class="space-y-4 text-gray-300">
+                                    <li class="flex items-start md:flex-row-reverse">
+                                        <div class="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-1 mr-3 md:ml-3 md:mr-0">
+                                            <i class="fas fa-check text-primary-light text-xs"></i>
+                                        </div>
+                                        <span class="md:text-right">Managed frontline patient interactions, assisting an average of 80+ patients daily</span>
+                                    </li>
+                                    <li class="flex items-start md:flex-row-reverse">
+                                        <div class="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-1 mr-3 md:ml-3 md:mr-0">
+                                            <i class="fas fa-check text-primary-light text-xs"></i>
+                                        </div>
+                                        <span class="md:text-right">Streamlined appointment scheduling, reducing patient wait times by 70%</span>
+                                    </li>
+                                    <li class="flex items-start md:flex-row-reverse">
+                                        <div class="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-1 mr-3 md:ml-3 md:mr-0">
+                                            <i class="fas fa-check text-primary-light text-xs"></i>
+                                        </div>
+                                        <span class="md:text-right">Verified and processed 400+ insurance claims per month, ensuring accurate billing</span>
+                                    </li>
+                                    <li class="flex items-start md:flex-row-reverse">
+                                        <div class="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-1 mr-3 md:ml-3 md:mr-0">
+                                            <i class="fas fa-check text-primary-light text-xs"></i>
+                                        </div>
+                                        <span class="md:text-right">Developed a structured patient records tracking system, improving documentation accuracy</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="md:w-1/2 md:pl-12 order-0 md:order-2">
+                            <div class="mb-1 text-sm font-semibold text-primary-light inline-flex items-center">
+                                <i class="fas fa-calendar-alt mr-2"></i>
+                                <span>MAR 2022 - NOV 2023</span>
+                            </div>
+                            <div class="mb-4 text-sm text-gray-400 flex items-center">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                <span>Sharjah, UAE</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Customer Relationship Executive</h3>
+                            <a href="https://sahaalshifa.com" target="_blank" class="text-xl font-medium gradient-text company-link mb-4 inline-block">
+                                Yasmed- Al Saha Wa AL Shifa Hospital
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Dot -->
+                    <div class="absolute left-0 top-5 md:left-1/2 md:transform md:-translate-x-1/2 md:top-5">
+                        <div class="w-10 h-10 rounded-full bg-primary-dark border-4 border-dark pulse-glow flex items-center justify-center">
+                            <i class="fas fa-hospital-user text-white"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="relative">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12 md:text-right">
+                            <div class="mb-1 text-sm font-semibold text-primary-light inline-flex items-center">
+                                <i class="fas fa-calendar-alt mr-2"></i>
+                                <span>FEB 2019 - JAN 2021</span>
+                            </div>
+                            <div class="mb-4 text-sm text-gray-400 flex items-center md:justify-end">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                <span>Sharjah, UAE</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Receptionist/Insurance</h3>
+                            <div class="text-xl font-medium gradient-text mb-4 inline-block">
+                                Bab Al Sajja Medical Center
+                            </div>
+                        </div>
+
+                        <div class="md:w-1/2 md:pl-12">
+                            <div class="bg-dark-lighter rounded-xl p-6 border border-dark-lighter shadow-lg">
+                                <ul class="space-y-4 text-gray-300">
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-1 mr-3">
+                                            <i class="fas fa-check text-primary-light text-xs"></i>
+                                        </div>
+                                        <span>Managed front desk operations in a high-traffic medical center, assisting 250+ patients per day</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-1 mr-3">
+                                            <i class="fas fa-check text-primary-light text-xs"></i>
+                                        </div>
+                                        <span>Reduced patient registration time by 60% through optimized data entry and scheduling processes</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-1 mr-3">
+                                            <i class="fas fa-check text-primary-light text-xs"></i>
+                                        </div>
+                                        <span>Handled daily inquiries and resolved 20% of concerns within the first interaction</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-1 mr-3">
+                                            <i class="fas fa-check text-primary-light text-xs"></i>
+                                        </div>
+                                        <span>Implemented digital record-keeping, reducing paperwork errors and improving efficiency</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Dot -->
+                    <div class="absolute left-0 top-5 md:left-1/2 md:transform md:-translate-x-1/2 md:top-5">
+                        <div class="w-10 h-10 rounded-full bg-primary-dark border-4 border-dark pulse-glow flex items-center justify-center">
+                            <i class="fas fa-clipboard-list text-white"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-dark-light relative pattern-dots">
+        <div class="absolute inset-0 bg-dark-light opacity-95"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 fade-in-up gradient-text-alt">Core Competencies</h2>
+                <div class="w-24 h-1 gradient-bg-alt mx-auto rounded-full fade-in-up delay-1"></div>
+            </div>
+
+            <!-- Skills Grid with Progress Bars -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-dark rounded-xl p-8 border border-dark-lighter shadow-xl">
+                    <h3 class="text-xl font-medium mb-8 text-white/90">Professional Skills</h3>
+
+                    <!-- Skill 1 -->
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-white font-medium">Customer Relations & Retention</span>
+                            <span class="text-primary-light">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 0%" data-width="95%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill 2 -->
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-white font-medium">Patient Engagement & Support</span>
+                            <span class="text-primary-light">98%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 0%" data-width="98%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill 3 -->
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-white font-medium">Conflict Resolution & Problem-Solving</span>
+                            <span class="text-primary-light">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 0%" data-width="90%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill 4 -->
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-white font-medium">Insurance Claims Processing</span>
+                            <span class="text-primary-light">92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 0%" data-width="92%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill 5 -->
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-white font-medium">Data Analysis & Reporting</span>
+                            <span class="text-primary-light">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 0%" data-width="85%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expertise Areas -->
+                <div>
+                    <div class="grid grid-cols-2 gap-6">
+                        <!-- Expertise 1 -->
+                        <div class="bg-dark rounded-xl p-6 border border-dark-lighter shadow-lg flex flex-col items-center text-center">
+                            <div class="w-16 h-16 gradient-bg-alt rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-users text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-lg font-medium text-white mb-2">Customer Relations</h3>
+                            <p class="text-gray-400 text-sm">Building strong relationships and ensuring customer satisfaction</p>
+                        </div>
+
+                        <!-- Expertise 2 -->
+                        <div class="bg-dark rounded-xl p-6 border border-dark-lighter shadow-lg flex flex-col items-center text-center">
+                            <div class="w-16 h-16 gradient-bg-alt rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-heart text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-lg font-medium text-white mb-2">Patient Engagement</h3>
+                            <p class="text-gray-400 text-sm">Enhancing patient experience and healthcare outcomes</p>
+                        </div>
+
+                        <!-- Expertise 3 -->
+                        <div class="bg-dark rounded-xl p-6 border border-dark-lighter shadow-lg flex flex-col items-center text-center">
+                            <div class="w-16 h-16 gradient-bg-alt rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-chart-line text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-lg font-medium text-white mb-2">Data Analysis</h3>
+                            <p class="text-gray-400 text-sm">Analyzing data to improve processes and outcomes</p>
+                        </div>
+
+                        <!-- Expertise 4 -->
+                        <div class="bg-dark rounded-xl p-6 border border-dark-lighter shadow-lg flex flex-col items-center text-center">
+                            <div class="w-16 h-16 gradient-bg-alt rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-cogs text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-lg font-medium text-white mb-2">Workflow Optimization</h3>
+                            <p class="text-gray-400 text-sm">Streamlining processes for maximum efficiency</p>
+                        </div>
+                    </div>
+
+                    <!-- Additional Skills -->
+                    <div class="mt-6 bg-dark rounded-xl p-6 border border-dark-lighter shadow-xl">
+                        <h3 class="text-lg font-medium text-white mb-4">Additional Skills</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-3 py-1 bg-primary/10 text-primary-light rounded-full text-sm">Team Collaboration</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary-light rounded-full text-sm">Multitasking</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary-light rounded-full text-sm">Time Management</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary-light rounded-full text-sm">Empathy</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary-light rounded-full text-sm">Active Listening</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary-light rounded-full text-sm">Billing</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary-light rounded-full text-sm">Payment Processing</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary-light rounded-full text-sm">Leadership</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-dark relative pattern-dots">
+        <div class="absolute inset-0 bg-dark opacity-95"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 fade-in-up gradient-text-alt">Education</h2>
+                <div class="w-24 h-1 gradient-bg-alt mx-auto rounded-full fade-in-up delay-1"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Education 1 -->
+                <div class="bg-dark-lighter rounded-xl p-8 border border-dark-lighter shadow-xl fade-in-left card-hover">
+                    <div class="flex items-start">
+                        <div class="w-16 h-16 gradient-bg-alt rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+                            <i class="fas fa-graduation-cap text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <span class="text-sm font-semibold text-primary-light mb-1 block">2022</span>
+                            <h3 class="text-xl font-bold text-white mb-2">Bachelor of Business Administration (BBA)</h3>
+                            <p class="text-lg font-medium gradient-text mb-2">Bharathiar University</p>
+                            <p class="text-gray-400 flex items-center">
+                                <i class="fas fa-map-marker-alt mr-2"></i> Tamil Nadu, India
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education 2 -->
+                <div class="bg-dark-lighter rounded-xl p-8 border border-dark-lighter shadow-xl fade-in-right card-hover">
+                    <div class="flex items-start">
+                        <div class="w-16 h-16 gradient-bg-alt rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+                            <i class="fas fa-certificate text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <span class="text-sm font-semibold text-primary-light mb-1 block">2016</span>
+                            <h3 class="text-xl font-bold text-white mb-2">Diploma in Business Management</h3>
+                            <p class="text-lg font-medium gradient-text mb-2">Rajeev Gandhi</p>
+                            <p class="text-gray-400 flex items-center">
+                                <i class="fas fa-map-marker-alt mr-2"></i> Kerala, India
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section id="languages" class="py-20 bg-dark-light relative pattern-dots">
+        <div class="absolute inset-0 bg-dark-light opacity-95"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 fade-in-up gradient-text-alt">Languages</h2>
+                <div class="w-24 h-1 gradient-bg-alt mx-auto rounded-full fade-in-up delay-1"></div>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8">
+                <!-- Language 1 -->
+                <div class="bg-dark rounded-xl p-6 border border-dark-lighter shadow-xl text-center fade-in-up">
+                    <div class="w-16 h-16 gradient-bg-alt rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-language text-white text-xl"></i>
+                    </div>
+                    <h4 class="font-semibold text-white text-lg mb-1">English</h4>
+                    <div class="inline-block px-3 py-1 bg-primary/10 text-primary-light rounded-full text-sm">Fluent</div>
+                </div>
+
+                <!-- Language 2 -->
+                <div class="bg-dark rounded-xl p-6 border border-dark-lighter shadow-xl text-center fade-in-up delay-1">
+                    <div class="w-16 h-16 gradient-bg-alt rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-language text-white text-xl"></i>
+                    </div>
+                    <h4 class="font-semibold text-white text-lg mb-1">Malayalam</h4>
+                    <div class="inline-block px-3 py-1 bg-primary/10 text-primary-light rounded-full text-sm">Native</div>
+                </div>
+
+                <!-- Language 3 -->
+                <div class="bg-dark rounded-xl p-6 border border-dark-lighter shadow-xl text-center fade-in-up delay-2">
+                    <div class="w-16 h-16 gradient-bg-alt rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-language text-white text-xl"></i>
+                    </div>
+                    <h4 class="font-semibold text-white text-lg mb-1">Hindi</h4>
+                    <div class="inline-block px-3 py-1 bg-primary/10 text-primary-light rounded-full text-sm">Proficient</div>
+                </div>
+
+                <!-- Language 4 -->
+                <div class="bg-dark rounded-xl p-6 border border-dark-lighter shadow-xl text-center fade-in-up delay-3">
+                    <div class="w-16 h-16 gradient-bg-alt rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-language text-white text-xl"></i>
+                    </div>
+                    <h4 class="font-semibold text-white text-lg mb-1">Tamil</h4>
+                    <div class="inline-block px-3 py-1 bg-primary/10 text-primary-light rounded-full text-sm">Basic</div>
+                </div>
+
+                <!-- Language 5 -->
+                <div class="bg-dark rounded-xl p-6 border border-dark-lighter shadow-xl text-center fade-in-up delay-4">
+                    <div class="w-16 h-16 gradient-bg-alt rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-language text-white text-xl"></i>
+                    </div>
+                    <h4 class="font-semibold text-white text-lg mb-1">Arabic</h4>
+                    <div class="inline-block px-3 py-1 bg-primary/10 text-primary-light rounded-full text-sm">Basic</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-dark relative pattern-dots">
+        <div class="absolute inset-0 bg-gradient-to-b from-dark to-dark-dark opacity-95"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 fade-in-up gradient-text-alt">Get In Touch</h2>
+                <div class="w-24 h-1 gradient-bg-alt mx-auto rounded-full fade-in-up delay-1"></div>
+                <p class="text-xl mt-6 fade-in-up delay-2 text-white/80">Ready to bring excellence to your healthcare team</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                <!-- Email -->
+                <div class="bg-dark-lighter rounded-xl p-8 border border-dark-lighter shadow-xl text-center fade-in-up">
+                    <div class="w-16 h-16 gradient-bg-alt rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-envelope text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Email</h3>
+                    <a href="mailto:saju.amal4@gmail.com" class="text-primary-light hover:text-primary transition-colors">saju.amal4@gmail.com</a>
+                </div>
+
+                <!-- Phone -->
+                <div class="bg-dark-lighter rounded-xl p-8 border border-dark-lighter shadow-xl text-center fade-in-up delay-1">
+                    <div class="w-16 h-16 gradient-bg-alt rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-phone text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Phone</h3>
+                    <a href="tel:+971522901279" class="text-primary-light hover:text-primary transition-colors">+971-522901279</a>
+                </div>
+
+                <!-- LinkedIn -->
+                <div class="bg-dark-lighter rounded-xl p-8 border border-dark-lighter shadow-xl text-center fade-in-up delay-2">
+                    <div class="w-16 h-16 gradient-bg-alt rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fab fa-linkedin-in text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/amal-saju-healthcare" target="_blank" class="text-primary-light hover:text-primary transition-colors">Connect with me</a>
+                </div>
+
+                <!-- Location -->
+                <div class="bg-dark-lighter rounded-xl p-8 border border-dark-lighter shadow-xl text-center fade-in-up delay-3">
+                    <div class="w-16 h-16 gradient-bg-alt rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Location</h3>
+                    <p class="text-gray-300">Sharjah, UAE</p>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="mt-16 text-center">
+                <a href="mailto:saju.amal4@gmail.com" class="inline-flex items-center justify-center bg-gradient-to-r from-primary-light to-primary-dark text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-primary/20 transition-all transform hover:scale-105 focus:ring-2 focus:ring-primary focus:ring-opacity-50 focus:outline-none">
+                    <i class="fas fa-paper-plane mr-3"></i>
+                    Send Message
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-dark text-white py-10 border-t border-dark-lighter">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <p class="text-gray-400">&copy; 2024 Amal Saju. Healthcare Administration Professional.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="mailto:saju.amal4@gmail.com" class="text-gray-400 hover:text-primary transition-colors">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="tel:+971522901279" class="text-gray-400 hover:text-primary transition-colors">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/amal-saju-healthcare" target="_blank" class="text-gray-400 hover:text-primary transition-colors">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <button id="scrollToTop" class="text-gray-400 hover:text-primary transition-colors">
+                        <i class="fas fa-arrow-up"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize skill progress bars
+            const skillProgressBars = document.querySelectorAll('.skill-progress');
+
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            // Observe animated elements
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // For skill bars
+                        if (entry.target.classList.contains('skill-progress')) {
+                            const width = entry.target.getAttribute('data-width');
+                            entry.target.style.width = width;
+                        }
+                        // For animated elements
+                        else {
+                            entry.target.style.animationPlayState = 'running';
+                        }
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Observe skill progress bars
+            skillProgressBars.forEach(bar => {
+                observer.observe(bar);
+            });
+
+            // Observe fade animations
+            document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right').forEach(el => {
+                el.style.animationPlayState = 'paused';
+                observer.observe(el);
+            });
+
+            // Scroll progress indicator
+            window.addEventListener('scroll', () => {
+                const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrollPercentage = (scrollTop / scrollHeight) * 100;
+
+                document.getElementById('scrollProgress').style.height = scrollPercentage + '%';
+            });
+
+            // Navigation dot active state
+            const sections = document.querySelectorAll('section');
+            const navDots = document.querySelectorAll('.section-dot');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+
+                    if (window.pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navDots.forEach(dot => {
+                    dot.classList.remove('active');
+                    if (dot.getAttribute('data-section') === current) {
+                        dot.classList.add('active');
+                    }
+                });
+            });
+
+            // Mobile menu functionality
+            const mobileMenuButton = document.getElementById('mobileMenuButton');
+            const closeMenuButton = document.getElementById('closeMenu');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.add('open');
+            });
+
+            closeMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+            });
+
+            // Close mobile menu when clicking menu items
+            document.querySelectorAll('#mobileMenu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('open');
+                });
+            });
+
+            // Scroll to top button
+            const scrollToTopButton = document.getElementById('scrollToTop');
+
+            scrollToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Print functionality
+            const printButtons = document.querySelectorAll('#printResume, #printResumeMobile');
+
+            printButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    window.print();
+                });
+            });
+        });
+    </script>
 </body>
+
 </html>
